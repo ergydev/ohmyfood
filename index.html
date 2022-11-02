@@ -4,15 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oh My Food</title>
+    <title>Accueil - Oh My Food</title>
+    <!-- fonts  -->
+    <!-- roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Shrikhand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <!-- CDN  -->
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css  -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <a href="index.html" class="header__logo">
-            <img src="" class="header__logo--img" alt="Logo OhMyFood">
-        </a>
+        <div class="header__logo">
+            <a href="index.html" class="header__logo--link">
+                <img src="images/logo/ohmyfood.png" class="header__logo--link--img" alt="Logo OhMyFood">
+            </a>
+        </div>
+        <div class="header__adress">
+            <i class="fa-solid fa-location-dot header__adress--img"></i>
+            <p class="header__adress--location">Paris, Belleville</p>
+        </div>
     </header>
+    <section id="reservation">
+        <div class="container">
+            <div class="reservation__wrapper">
+                <h1 class="reservation__wrapper--tittle">Réservez le menu qui vous convient</h1>
+                <p class="reservation__wrapper--text">Découvrez des restaurants d'exception, sélécetionnés par nos soins</p>
+                <button>Explorer nos restaurants</button>
+            </div>
+        </div>
+    </section>
+    <section id="fonctionnement">
+        <div class="container">
+            <div class="fonctionnement__wrapper">
+                <h2 class="home__section--title">Fonctionnement</h2>
+                <div class="fonctionnement__stages">
+                    <div class="fonctionnement__stages--wrapper">
+                        <p class="fonctionnement__stages--wrapper--number">1</p>
+                        <i class="fa-solid fa-mobile-screen-button fonctionnement__stages--wrapper--img"></i>
+                        <p class="fonctionnement__stages--wrapper--text">Choisissez un restaurant</p>
+                    </div>
+                    <div class="fonctionnement__stages--wrapper">
+                        <p class="fonctionnement__stages--wrapper--number">2</p>
+                        <i class="fa-solid fa-list fonctionnement__stages--wrapper--img"></i>
+                        <p class="fonctionnement__stages--wrapper--text">Composez votre menu</p>
+                    </div>
+                    <div class="fonctionnement__stages--wrapper">
+                        <p class="fonctionnement__stages--wrapper--number">3</p>
+                        <i class="fa-sharp fa-solid fa-store fonctionnement__stages--wrapper--img"></i>
+                        <p class="fonctionnement__stages--wrapper--text">Dégustez au restaurant</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="restaurants">
+        <div class="container">
+            <div class="restaurants__wrapper">
+                <div class="restaurant__card">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+
+
     
 </body>
 </html>
