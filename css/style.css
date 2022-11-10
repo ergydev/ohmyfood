@@ -241,6 +241,7 @@ header .header__adress .header__adress--location {
 
 #restaurants {
   background-color: #f2f2f2;
+  margin-bottom: 0;
 }
 #restaurants .restaurants__wrapper {
   display: flex;
@@ -291,22 +292,68 @@ header .header__adress .header__adress--location {
   border: none;
   font-size: 30px;
 }
-#restaurants .restaurant__card--text button .heart-empty {
-  display: block;
-}
-#restaurants .restaurant__card--text button .heart-empty .heart-empty:active {
-  display: none;
-}
 #restaurants .restaurant__card--text button .heart-active {
-  display: block;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #000;
   color: transparent;
+  font-size: 30px;
 }
 #restaurants .heart-active:hover {
   background: -webkit-linear-gradient(1deg, rgb(147, 86, 220) 0%, rgb(150, 86, 220) 41%, rgb(255, 121, 218) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media screen and (min-width: 768px) {
+  #restaurants .restaurants__wrapper .restaurant__card {
+    margin: 2rem 1rem;
+  }
+  #restaurants .restaurants__wrapper .restaurant__card .restaurant__card--wrap {
+    height: 300px;
+  }
+  #restaurants .restaurants__wrapper .restaurant__card .restaurant__card--wrap .restaurant__card--img {
+    height: 290px;
+  }
+  #restaurants .restaurants__wrapper .restaurant__card .restaurant__card--wrap .restaurant__card--new {
+    font-size: 18px;
+    top: 20px;
+    padding: 10px 14px;
+  }
+  #restaurants .restaurants__wrapper .restaurant__card .restaurant__card--text--title {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #restaurants .reservation__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+footer {
+  background-color: #353535;
+  padding: 1rem 0 2rem;
+}
+footer .footer__links {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer__links a {
+  color: #fff;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+footer .footer__links .footer__links--logo {
+  font-size: 18px;
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 1rem;
+}
+footer .footer__links .footer__links--link {
+  display: flex;
+}
+footer .footer__links .footer__links--link i {
+  width: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

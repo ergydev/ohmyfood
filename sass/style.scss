@@ -262,6 +262,7 @@ header{
 
 #restaurants {
   background-color: #f2f2f2;
+  margin-bottom: 0;
 
   .restaurants__wrapper{
 
@@ -325,27 +326,11 @@ header{
       border: none;
       font-size: 30px;
 
-      .heart-empty{
-        display: block;
-
-
-        .heart-empty:active{
-          display: none;
-        }
-      }
-
-      
-
       .heart-active{
-        display: block;
-        // background: -webkit-linear-gradient(1deg, rgba(147,86,220,1) 0%, rgba(150,86,220,1) 41%, rgba(255,121,218,1) 100%);
-        // -webkit-background-clip: text;
-        // -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 3px ;
         -webkit-text-stroke-color: #000;
         color: transparent;
-
-
+        font-size: 30px;
       }
 
     }
@@ -357,4 +342,73 @@ header{
     -webkit-text-fill-color: transparent;
     }
 
+
+    // MEDIA QUERIES RESTAURANT // 
+    @media screen and (min-width: 768px){
+      .restaurants__wrapper .restaurant__card{
+        margin: 2rem 1rem;
+
+        .restaurant__card--wrap{
+          height: 300px;
+
+          .restaurant__card--img{
+            height: 290px;
+          }
+
+          .restaurant__card--new{
+            font-size: 18px;
+            top: 20px;
+            padding: 10px 14px;
+          }
+        }
+        
+        .restaurant__card--text--title{
+          font-size: 20px;
+        }
+
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .reservation__wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+    }
+}
+
+// FOOTER //
+
+footer{
+  background-color: #353535;
+  padding: 1rem 0 2rem;
+
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+
+    a{
+      color: #fff;
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .footer__links--logo{
+      font-size: 18px;
+      font-family: 'Shrikhand', cursive;
+      margin-bottom: 1rem;
+    }
+
+    .footer__links--link{
+      display: flex;
+
+      i{
+        width: 30px;
+      }
+    }
+  }
+
+  
 }
