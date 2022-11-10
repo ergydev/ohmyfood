@@ -37,6 +37,19 @@ button:hover {
   font-weight: 700;
   margin-bottom: 25px;
 }
+@media screen and (min-width: 768px) {
+  .home__section--title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .home__section--title {
+    margin-bottom: 3rem;
+    font-size: 2.3rem;
+  }
+}
 
 header {
   display: flex;
@@ -130,16 +143,17 @@ header .header__adress .header__adress--location {
 }
 @media screen and (min-width: 1024px) {
   #reservation {
-    padding: 3rem 0;
+    padding: 8rem 0;
   }
   #reservation .container {
     max-width: 80%;
   }
   #reservation .reservation__wrapper .reservation__wrapper--title {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   #reservation .reservation__wrapper .reservation__wrapper--text {
-    font-size: 22px;
+    font-size: 30px;
+    font-weight: 400;
   }
 }
 
@@ -323,7 +337,7 @@ header .header__adress .header__adress--location {
   }
 }
 @media screen and (min-width: 1024px) {
-  #restaurants .reservation__wrapper {
+  #restaurants .restaurants__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 1280px;
@@ -354,6 +368,21 @@ footer .footer__links .footer__links--link {
 }
 footer .footer__links .footer__links--link i {
   width: 30px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 2rem 0 2rem;
+  }
+  footer .footer__links {
+    align-items: center;
+  }
+  footer .footer__links .footer__links--logo {
+    font-size: 2rem;
+  }
+  footer .footer__links .footer__links--link {
+    font-size: 20px;
+    margin-bottom: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

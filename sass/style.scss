@@ -121,7 +121,7 @@ header{
 
   @media screen and (min-width: 1024px) {
     
-    padding: 3rem 0;
+    padding: 8rem 0;
 
     .container{
       max-width: 80%;
@@ -129,11 +129,12 @@ header{
 
     .reservation__wrapper{
       .reservation__wrapper--title{
-        font-size: 2rem;
+        font-size: 3rem;
       }
 
       .reservation__wrapper--text{
-        font-size: 22px;
+        font-size: 30px;
+        font-weight: 400;
       }
     }
   }
@@ -370,7 +371,7 @@ header{
     }
 
     @media screen and (min-width: 1024px) {
-      .reservation__wrapper{
+      .restaurants__wrapper{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         max-width: 1280px;
@@ -410,5 +411,23 @@ footer{
     }
   }
 
-  
+  @media screen and (min-width: 768px) {
+    padding: 2rem 0 2rem;
+
+    .footer__links {
+      align-items: center;
+
+
+      .footer__links--logo{
+        font-size: 2rem;
+      }
+
+      .footer__links--link{
+        font-size: 20px;
+        margin-bottom: 2rem;
+      }
+
+    }
+    
+  }
 }
