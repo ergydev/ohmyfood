@@ -1,5 +1,56 @@
+// FONTS //
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 a {
     text-decoration: none;
     color: #000;
+    
+    :hover{
+        cursor: pointer;
+    }
 }
 
+// Base Style // 
+
+h1{
+    font-weight: 700;
+}
+
+img {
+    max-width: 100%;
+}
+
+section{
+    margin-bottom: 3rem;
+    padding: 3rem 0;
+}
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.home__section--title{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 25px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 3rem;
+        font-size: 2.3rem;
+    }
+    
+}
