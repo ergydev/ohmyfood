@@ -33,7 +33,17 @@ section{
     margin: 0 auto;
 }
 
-button:hover{
+.btn {
+    border: none;
+    background:linear-gradient(1deg, #9356DC 30%, #FF79DA 100%); 
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 25px;
+    font-size: 19px;
+
+  }
+
+button:hover, .btn:hover{
     cursor: pointer;
 }
 

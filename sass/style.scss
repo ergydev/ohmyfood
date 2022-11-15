@@ -82,20 +82,14 @@ header{
       margin-bottom: 2rem;
     }
   
-    button {
-      border: none;
-      background:linear-gradient(1deg, #9356DC 30%, #FF79DA 100%); 
-      color: #fff;
-      padding: 12px 18px;
-      border-radius: 25px;
-      font-size: 18px;
 
-      a {
-        color: #fff;
-      }
-    }
 
     
+  }
+
+  .reservation__wrapper .btn:hover{
+    filter: brightness(1.2);
+    transition: all ease-in-out 5ms;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -176,7 +170,7 @@ header{
     .fonctionnement__stages--wrapper--number{
       position: absolute;
       left: -10px;
-      bottom: 25%;
+      bottom: 28%;
     
       color: #fff;
       background-color: $primary;
@@ -197,28 +191,26 @@ header{
 
   @media screen and (min-width: 768px)  {
     // .fonctionnement__stages//
-      grid-template-rows: repeat(2, 1fr);
-      row-gap: 25px;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 20px;
+      grid-template-rows: repeat(3, 1fr);
+      row-gap: 3rem;
+
+
     
       .fonctionnement__stages--wrapper{
         flex-direction: column;
         min-width: 230px;
-        min-height: 70px;
+        min-height: 100px;
         align-items: center;
 
         .fonctionnement__stages--wrapper--number{
           left: 46%;
           right: 116px;
           top: -12px;
-          bottom: 98px;
+          bottom: 128px;
         }
       }
 
-      :nth-child(3){
-        grid-column: span 2/3;
-      }
+
   }
 
   @media screen and (min-width: 1024px) {
@@ -328,8 +320,7 @@ header{
       font-size: 30px;
 
       .heart-active{
-        -webkit-text-stroke-width: 3px ;
-        -webkit-text-stroke-color: #000;
+        -webkit-text-stroke: 2px #000;
         color: transparent;
         font-size: 30px;
       }
@@ -337,10 +328,14 @@ header{
     }
   }
 
-  .heart-active:hover{
+  .heart-active:active{
     background: -webkit-linear-gradient(1deg, rgba(147,86,220,1) 0%, rgba(150,86,220,1) 41%, rgba(255,121,218,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: initial  !important;
+    font-size: 34px;
+
+    transition: all ease-in 12ms;
     }
 
 
@@ -429,5 +424,51 @@ footer{
 
     }
     
+  }
+}
+
+// PAGES MENU //
+
+#menu__header{
+  
+   >.container{
+    max-width: 400px;
+
+    .header__logo{
+      width: 400px;
+      padding-top: 1rem;
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      >.header__logo--link{
+        font-size: 27px;
+        position: absolute;
+        right: 245px;
+      }
+
+      :nth-child(2){
+        max-width: 180px;
+        position: static;
+      }
+    }
+  }
+}
+
+
+#main__menu{
+
+  #landing_image{
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  #menu{
+    z-index: 1000;
+    position: absolute;
+    top: 280px;
+    left: 0;
+    border-radius: 30px 30px 0 0;
+    background-color: #e9e9e9;
   }
 }
