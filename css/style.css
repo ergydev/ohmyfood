@@ -1,3 +1,24 @@
+.menu__plat:nth-child(3) {
+  animation-delay: 0.5s !important;
+}
+
+.menu__plat:nth-child(4) {
+  animation-delay: 1s !important;
+}
+
+.menu__plat:nth-child(5) {
+  animation-delay: 1.5s !important;
+}
+
+@keyframes move-up {
+  0% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 #menu__header > .container {
   max-width: 400px;
 }
@@ -102,7 +123,9 @@
   grid-template-columns: 95% 5%;
   grid-template-rows: repeat(2, 1fr);
   box-shadow: 1px 3px 15px 1px rgba(135, 135, 135, 0.6);
+  opacity: 0;
   position: relative;
+  animation: move-up 1s ease-in forwards;
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--title {
   grid-column: 1;
@@ -130,13 +153,12 @@
 #main__menu #menu .menu__wrapper .menu__plat :hover + .menu__plat--validate {
   display: block;
   color: #fff;
-  padding: 24px 22px;
+  padding: 27px 22px;
   background-color: #99e2d0;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 20px 15px 0;
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 95%;
   right: 0;
 }
 #main__menu #menu .menu__wrapper .menu__plat :hover + .menu__plat--validate i {
