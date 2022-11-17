@@ -79,11 +79,16 @@
         font-size: 30px;
         justify-content: space-between;
         margin-bottom: 1rem;
+        align-items: center;
 
-        i{
-            padding-right: 30px;
+            h1{
+                letter-spacing: 2px;
+            }
 
-        }
+            i{
+                padding-right: 30px;
+
+            }
         }
 
         .menu__wrapper{
@@ -197,6 +202,10 @@
                     font-size: 3rem;
                     margin-bottom: 3rem;
                     justify-content: space-evenly;
+
+                    .heart-active{
+                        font-size: 32px;
+                    }
                 }
     
                 .menu__wrapper{

@@ -63,6 +63,10 @@
   font-size: 30px;
   justify-content: space-between;
   margin-bottom: 1rem;
+  align-items: center;
+}
+#main__menu #menu .menu__title h1 {
+  letter-spacing: 2px;
 }
 #main__menu #menu .menu__title i {
   padding-right: 30px;
@@ -157,6 +161,9 @@
     font-size: 3rem;
     margin-bottom: 3rem;
     justify-content: space-evenly;
+  }
+  #main__menu #menu > .container .menu__title .heart-active {
+    font-size: 32px;
   }
   #main__menu #menu > .container .menu__wrapper {
     margin: 4rem auto;
