@@ -2,7 +2,7 @@
   max-width: 400px;
 }
 #menu__header > .container .header__logo {
-  width: 400px;
+  max-width: 400px;
   padding-top: 1rem;
   display: flex;
   justify-content: center;
@@ -16,6 +16,30 @@
 #menu__header > .container .header__logo :nth-child(2) {
   max-width: 180px;
   position: static;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #menu__header {
+    padding: 1rem 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #menu__header {
+    padding: 2rem 0;
+  }
+  #menu__header > .container {
+    max-width: 900px;
+  }
+  #menu__header > .container .header__logo {
+    max-width: 900px;
+  }
+  #menu__header > .container .header__logo > .header__logo--link {
+    font-size: 40px;
+    right: 300px;
+    top: 20px;
+  }
+  #menu__header > .container .header__logo :nth-child(2) {
+    max-width: 280px;
+  }
 }
 
 #main__menu #landing_image {
@@ -42,7 +66,6 @@
 }
 #main__menu #menu .menu__title i {
   padding-right: 30px;
-  font-weight: 400;
 }
 #main__menu #menu .menu__wrapper {
   margin: 2rem 0;
@@ -52,7 +75,7 @@
   font-size: 18px;
   padding-bottom: 10px;
   position: relative;
-  width: 200px;
+  max-width: 200px;
   z-index: 1;
   margin-bottom: 8px;
 }
@@ -89,6 +112,7 @@
   grid-row: 2;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--price {
   grid-row: 2;
@@ -121,7 +145,99 @@
 #main__menu #menu .menu__button {
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  #main__menu #menu {
+    top: 370px;
+    padding-top: 3rem;
+  }
+  #main__menu #menu > .container {
+    max-width: 700px;
+  }
+  #main__menu #menu > .container .menu__title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    justify-content: space-evenly;
+  }
+  #main__menu #menu > .container .menu__wrapper {
+    margin: 4rem auto;
+    max-width: 600px;
+  }
+  #main__menu #menu > .container .menu__wrapper .menu__wrapper--title {
+    font-size: 22px;
+    padding-bottom: 12px;
+    max-width: 225px;
+    margin-bottom: 2rem;
+  }
+  #main__menu #menu > .container .menu__wrapper .menu__plat {
+    margin: 2rem 0;
+    padding: 20px;
+  }
+  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--title h3 {
+    font-size: 22px;
+  }
+  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--text > p {
+    font-size: 18px;
+  }
+  #main__menu #menu .menu__button .btn {
+    font-size: 23px;
+    padding: 15px 25px;
+  }
+}
 
+@media screen and (min-width: 1024px) {
+  #main__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+  }
+  #main__menu #landing_image {
+    max-width: 100%;
+    max-height: 400px;
+  }
+  #main__menu #menu {
+    position: static;
+    border-radius: 0;
+  }
+  #main__menu #menu > .container {
+    max-width: 1200px;
+  }
+  #main__menu #menu > .container .menu__title {
+    justify-content: center;
+  }
+  #main__menu #menu > .container .menu__title h1 {
+    margin-right: 2rem;
+  }
+  #main__menu #menu > .container .menu__title .heart-active {
+    font-size: 3rem;
+  }
+  #main__menu #menu > .container .menu__title .heart-active:active {
+    font-size: 3rem;
+  }
+  #main__menu #menu > .container .menu__title .heart-active:hover {
+    cursor: pointer;
+  }
+  #main__menu #menu > .container .menu__wrapper {
+    max-width: 800px;
+  }
+  #main__menu #menu > .container .menu__wrapper .menu__wrapper--title {
+    font-size: 26px;
+  }
+  #main__menu #menu > .container .menu__wrapper .menu__plat {
+    margin: 3rem 0;
+    padding: 24px;
+  }
+  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--title h3 {
+    font-size: 28px;
+  }
+  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--text p {
+    font-size: 20px;
+  }
+  #main__menu #menu > .container .menu__button .btn {
+    font-size: 26px;
+    padding: 12px 30px;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -149,6 +265,56 @@ img {
 section {
   margin-bottom: 3rem;
   padding: 3rem 0;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+button:hover, .btn:hover {
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  font-size: 30px;
+}
+button .heart-active {
+  -webkit-text-stroke: 2px #000;
+  color: transparent;
+  font-size: 32px;
+}
+button .heart-active :hover {
+  cursor: pointer;
+}
+
+.heart-active {
+  -webkit-text-stroke: 2px #000;
+  color: transparent;
+  font-size: 30px;
+  border: none;
+}
+.heart-active :hover {
+  cursor: pointer;
+}
+
+.heart-active:active {
+  background: -webkit-linear-gradient(1deg, rgb(147, 86, 220) 0%, rgb(150, 86, 220) 41%, rgb(255, 121, 218) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: initial !important;
+  font-size: 34px;
+  transition: all ease-in 12ms;
+}
+
+.btn {
+  border: none;
+  background: linear-gradient(1deg, #9356DC 30%, #FF79DA 100%);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 25px;
+  font-size: 19px;
 }
 
 footer {
@@ -194,26 +360,19 @@ footer .footer__links .footer__links--link i {
   z-index: 10001;
   position: absolute;
   min-width: 100%;
-  top: 193%;
+  top: 262%;
   max-height: 6rem;
 }
-
-.container {
-  max-width: 90%;
-  margin: 0 auto;
+@media screen and (min-width: 768px) {
+  #page-container footer {
+    max-height: 12rem;
+    top: 362%;
+  }
 }
-
-.btn {
-  border: none;
-  background: linear-gradient(1deg, #9356DC 30%, #FF79DA 100%);
-  color: #fff;
-  padding: 14px 20px;
-  border-radius: 25px;
-  font-size: 19px;
-}
-
-button:hover, .btn:hover {
-  cursor: pointer;
+@media screen and (min-width: 1024px) {
+  #page-container footer {
+    position: static;
+  }
 }
 
 .home__section--title {
@@ -477,19 +636,6 @@ header .header__adress .header__adress--location {
 #restaurants .restaurant__card--text button {
   border: none;
   font-size: 30px;
-}
-#restaurants .restaurant__card--text button .heart-active {
-  -webkit-text-stroke: 2px #000;
-  color: transparent;
-  font-size: 30px;
-}
-#restaurants .heart-active:active {
-  background: -webkit-linear-gradient(1deg, rgb(147, 86, 220) 0%, rgb(150, 86, 220) 41%, rgb(255, 121, 218) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: initial !important;
-  font-size: 34px;
-  transition: all ease-in 12ms;
 }
 @media screen and (min-width: 768px) {
   #restaurants .restaurants__wrapper .restaurant__card {
