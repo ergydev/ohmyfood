@@ -1,5 +1,5 @@
 // ANIMATION //
-
+/*move up plat menu */
 .menu__plat:nth-child(3){
     animation-delay: .5s !important;
 }
@@ -20,3 +20,32 @@
         opacity: 1;
     }
 }
+
+/* validate */
+@keyframes right-to-left{
+    from{
+        transform: translateX(70px);
+        display: none;
+        
+    }
+
+    to{
+        transform:translateX(10px);
+        display: block;
+        
+    }
+}
+
+
+/* rotate-icon */
+@keyframes rotate-icon{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+// @keyframes reduce-size
