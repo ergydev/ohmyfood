@@ -90,7 +90,7 @@
   letter-spacing: 2px;
 }
 #main__menu #menu .menu__title i {
-  padding-right: 30px;
+  padding-right: 5px;
 }
 #main__menu #menu .menu__wrapper {
   margin: 2rem 0;
@@ -140,6 +140,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--price {
   grid-row: 2;
@@ -149,6 +151,7 @@
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--validate {
   display: none;
+  transition: transform 0.6s ease-in-out;
 }
 #main__menu #menu .menu__wrapper .menu__plat :hover + .menu__plat--validate {
   display: block;
@@ -160,6 +163,7 @@
   top: 0;
   bottom: 0;
   right: 0;
+  animation: right-to-left 0.6s;
 }
 #main__menu #menu .menu__wrapper .menu__plat :hover + .menu__plat--validate i {
   color: #99e2d0;
@@ -170,6 +174,14 @@
 }
 #main__menu #menu .menu__button {
   text-align: center;
+}
+@keyframes right-to-left {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
 @media screen and (min-width: 768px) {
   #main__menu #menu {
@@ -312,7 +324,7 @@ button {
 button .heart-active {
   -webkit-text-stroke: 2px #000;
   color: transparent;
-  font-size: 32px;
+  font-size: 30px;
 }
 button .heart-active :hover {
   cursor: pointer;
@@ -328,13 +340,18 @@ button .heart-active :hover {
   cursor: pointer;
 }
 
-.heart-active:active {
+.heart-active:hover {
   background: -webkit-linear-gradient(1deg, rgb(147, 86, 220) 0%, rgb(150, 86, 220) 41%, rgb(255, 121, 218) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: initial !important;
-  font-size: 34px;
+  font-size: 32px;
   transition: all ease-in 12ms;
+}
+@media screen and (max-width: 768px) {
+  .heart-active:hover {
+    font-size: 30px;
+  }
 }
 
 .btn {
@@ -344,6 +361,11 @@ button .heart-active :hover {
   padding: 14px 20px;
   border-radius: 25px;
   font-size: 19px;
+}
+.btn:hover {
+  box-shadow: 0px 14px 36px 6px rgba(150, 150, 150, 0.45);
+  filter: brightness(1.2);
+  transition: all ease-in-out 5ms;
 }
 
 footer {
@@ -487,10 +509,6 @@ header .header__adress .header__adress--location {
   font-size: 18px;
   font-weight: 300;
   margin-bottom: 2rem;
-}
-#reservation .reservation__wrapper .btn:hover {
-  filter: brightness(1.2);
-  transition: all ease-in-out 5ms;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #reservation {
@@ -665,6 +683,7 @@ header .header__adress .header__adress--location {
 #restaurants .restaurant__card--text button {
   border: none;
   font-size: 30px;
+  background-color: #f2f2f2;
 }
 @media screen and (min-width: 768px) {
   #restaurants .restaurants__wrapper .restaurant__card {
