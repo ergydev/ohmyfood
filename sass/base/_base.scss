@@ -67,14 +67,14 @@ button{
   border: none;
 
   &:hover{
-    background: -webkit-linear-gradient(1deg, rgba(147,86,220,1) 0%, rgba(150,86,220,1) 41%, rgba(255,121,218,1) 100%);
+    background-image: -webkit-linear-gradient(1deg, rgba(147,86,220,1) 0%, rgba(150,86,220,1) 41%, rgba(255,121,218,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: initial  !important;
     font-size: 32px;
     cursor: pointer;
   
-    transition: all ease-in 12ms;
+    transition: background-image ease-in-out 500ms;
     
   
       @media screen and (max-width: 768px){

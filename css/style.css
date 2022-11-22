@@ -21,7 +21,7 @@
   }
 }
 /* validate */
-@keyframes right-to-left {
+@keyframes right-to-left-in {
   from {
     transform: translateX(70px);
     display: none;
@@ -31,6 +31,16 @@
     display: block;
   }
 }
+@keyframes right-to-left-out {
+  from {
+    transform: translateX(10px);
+    display: block;
+  }
+  to {
+    transform: translateX(70px);
+    display: none;
+  }
+}
 /* rotate-icon */
 @keyframes rotate-icon {
   from {
@@ -38,6 +48,14 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes reduce-size {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(30px);
   }
 }
 #menu__header > .container {
@@ -53,7 +71,7 @@
 #menu__header > .container .header__logo > .header__logo--link {
   font-size: 27px;
   position: absolute;
-  right: 245px;
+  right: 190px;
 }
 #menu__header > .container .header__logo :nth-child(2) {
   max-width: 180px;
@@ -173,7 +191,13 @@
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--validate {
   display: none;
+  animation: right-to-left-out 0.6s both;
   transition: transform 0.6s ease-in-out;
+}
+#main__menu #menu .menu__wrapper .menu__plat:hover {
+  transform-origin: 0% 50%;
+  transform: scaleX(0);
+  transition: transform 0.5s;
 }
 #main__menu #menu .menu__wrapper .menu__plat :hover + .menu__plat--validate {
   display: flex;
@@ -187,8 +211,7 @@
   top: 0;
   bottom: 0;
   right: 0;
-  animation: right-to-left 0.6s;
-  animation-fill-mode: both;
+  animation: right-to-left-in 0.6s both;
 }
 #main__menu #menu .menu__wrapper .menu__plat :hover + .menu__plat--validate i {
   color: #99e2d0;
@@ -355,13 +378,13 @@ button .heart-active :hover {
   border: none;
 }
 .heart-active:hover {
-  background: -webkit-linear-gradient(1deg, rgb(147, 86, 220) 0%, rgb(150, 86, 220) 41%, rgb(255, 121, 218) 100%);
+  background-image: -webkit-linear-gradient(1deg, rgb(147, 86, 220) 0%, rgb(150, 86, 220) 41%, rgb(255, 121, 218) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: initial !important;
   font-size: 32px;
   cursor: pointer;
-  transition: all ease-in 12ms;
+  transition: background-image ease-in-out 500ms;
 }
 @media screen and (max-width: 768px) {
   .heart-active:hover {
@@ -565,7 +588,7 @@ header .header__adress .header__adress--location {
   justify-self: center;
   display: flex;
   justify-content: space-evenly;
-  min-width: 300px;
+  min-width: 250px;
   padding: 20px 15px;
   background: #f7f7f7;
   border-radius: 25px;

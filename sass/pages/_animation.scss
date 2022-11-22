@@ -22,7 +22,7 @@
 }
 
 /* validate */
-@keyframes right-to-left{
+@keyframes right-to-left-in{
     from{
         transform: translateX(70px);
         display: none;
@@ -33,6 +33,19 @@
         transform:translateX(10px);
         display: block;
         
+    }
+}
+
+@keyframes right-to-left-out{
+    from{
+        transform:translateX(10px);
+        display: block;
+        
+    }
+
+    to{
+        transform: translateX(70px);
+        display: none;
     }
 }
 
@@ -48,4 +61,11 @@
 }
 
 
-// @keyframes reduce-size
+@keyframes reduce-size{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(30px);
+    }
+}
