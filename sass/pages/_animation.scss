@@ -21,45 +21,6 @@
     }
 }
 
-/* validate */
-@keyframes right-to-left-in{
-    from{
-        transform: translateX(70px);
-        display: none;
-        
-    }
-
-    to{
-        transform:translateX(10px);
-        display: block;
-        
-    }
-}
-
-@keyframes right-to-left-out{
-    from{
-        transform:translateX(10px);
-        display: block;
-        
-    }
-
-    to{
-        transform: translateX(70px);
-        display: none;
-    }
-}
-
-
-/* rotate-icon */
-@keyframes rotate-icon{
-    from{
-        transform: rotate(0);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
-
 
 @keyframes reduce-size{
     from{

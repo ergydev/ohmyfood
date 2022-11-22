@@ -20,36 +20,6 @@
     opacity: 1;
   }
 }
-/* validate */
-@keyframes right-to-left-in {
-  from {
-    transform: translateX(70px);
-    display: none;
-  }
-  to {
-    transform: translateX(10px);
-    display: block;
-  }
-}
-@keyframes right-to-left-out {
-  from {
-    transform: translateX(10px);
-    display: block;
-  }
-  to {
-    transform: translateX(70px);
-    display: none;
-  }
-}
-/* rotate-icon */
-@keyframes rotate-icon {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes reduce-size {
   from {
     transform: translateX(0);
@@ -157,18 +127,16 @@
   background-color: #fff;
   margin: 1rem 0;
   border-radius: 20px;
-  padding: 14px;
-  display: grid;
-  grid-template-columns: 95% 5%;
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
   box-shadow: 1px 3px 15px 1px rgba(135, 135, 135, 0.6);
   opacity: 0;
-  position: relative;
   overflow: hidden;
   animation: move-up 1s ease-in forwards;
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--title {
-  grid-column: 1;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--title h3 {
   font-weight: 700;
@@ -176,50 +144,39 @@
   margin-bottom: 5px;
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--text {
-  grid-row: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--price {
-  grid-row: 2;
   padding-left: 10px;
   font-size: 18px;
   font-weight: 700;
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--validate {
-  display: none;
-  animation: right-to-left-out 0.6s both;
-  transition: transform 0.6s ease-in-out;
-}
-#main__menu #menu .menu__wrapper .menu__plat:hover {
-  transform-origin: 0% 50%;
-  transform: scaleX(0);
-  transition: transform 0.5s;
-}
-#main__menu #menu .menu__wrapper .menu__plat :hover + .menu__plat--validate {
+  width: 0px;
+  overflow: hidden;
+  transition: width 500ms;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
-  padding: 27px 27px;
   background-color: #99e2d0;
   border-radius: 0 20px 15px 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  animation: right-to-left-in 0.6s both;
 }
-#main__menu #menu .menu__wrapper .menu__plat :hover + .menu__plat--validate i {
+#main__menu #menu .menu__wrapper .menu__plat .menu__plat--validate i {
   color: #99e2d0;
   padding: 12px;
   border-radius: 20px;
   background-color: #fff;
   font-size: 14px;
-  animation: rotate-icon 0.6s ease-in forwards;
+  transition: transform 500ms ease-in-out;
+}
+#main__menu #menu .menu__wrapper .menu__plat :hover + .menu__plat--validate {
+  width: 20%;
+}
+#main__menu #menu .menu__wrapper .menu__plat :hover + .menu__plat--validate i {
+  transform: rotate(360deg);
 }
 #main__menu #menu .menu__button {
   text-align: center;
@@ -252,12 +209,14 @@
   }
   #main__menu #menu > .container .menu__wrapper .menu__plat {
     margin: 2rem 0;
-    padding: 20px;
+  }
+  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--title {
+    padding: 16px 20px;
   }
   #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--title h3 {
     font-size: 22px;
   }
-  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--text > p {
+  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--title > p {
     font-size: 18px;
   }
   #main__menu #menu .menu__button .btn {
@@ -307,13 +266,15 @@
   }
   #main__menu #menu > .container .menu__wrapper .menu__plat {
     margin: 3rem 0;
-    padding: 24px;
+  }
+  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--title {
+    padding: 18px 26px;
   }
   #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--title h3 {
     font-size: 28px;
   }
-  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--text p {
-    font-size: 20px;
+  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--title .menu__plat--text p {
+    font-size: 23px;
   }
   #main__menu #menu > .container .menu__button .btn {
     font-size: 26px;
@@ -404,6 +365,12 @@ button .heart-active :hover {
   box-shadow: 0px 14px 36px 6px rgba(150, 150, 150, 0.45);
   filter: brightness(1.2);
   transition: all ease-in-out 5ms;
+}
+
+.elipssis {
+  text-overflow: ellipsis !important;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 footer {
