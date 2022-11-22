@@ -29,6 +29,11 @@ img {
     max-width: 100%;
 }
 
+section{
+    margin-bottom: 3rem;
+    padding: 3rem 0;
+}
+
 
 .container{
   max-width: 90%;
@@ -110,7 +115,7 @@ button{
 
 footer{
     background-color: #353535;
-    padding: 1rem 0 2rem;
+    padding: 1rem 0 3rem;
     min-width: 100%;
     max-height: 6rem;
   
@@ -140,7 +145,7 @@ footer{
     }
   
     @media screen and (min-width: 768px) {
-      padding: 2rem 0 2rem;
+      padding: 2rem 0 4rem;
       max-height: 12rem;
   
       .footer__links {
