@@ -1,3 +1,4 @@
+/*move up plat menu */
 .menu__plat:nth-child(3) {
   animation-delay: 0.5s !important;
 }
@@ -19,6 +20,37 @@
     opacity: 1;
   }
 }
+@keyframes reduce-size {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(30px);
+  }
+}
+#loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  z-index: 4;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  animation: loading 2s ease-in-out forwards;
+}
+#loading img {
+  max-width: 100px;
+}
+
+@keyframes loading {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
 #menu__header > .container {
   max-width: 400px;
 }
@@ -32,7 +64,7 @@
 #menu__header > .container .header__logo > .header__logo--link {
   font-size: 27px;
   position: absolute;
-  right: 245px;
+  right: 190px;
 }
 #menu__header > .container .header__logo :nth-child(2) {
   max-width: 180px;
@@ -63,21 +95,23 @@
   }
 }
 
+#main__menu {
+  background-color: #f7f7f7;
+}
 #main__menu #landing_image {
   padding: 0;
   margin-bottom: 0;
 }
 #main__menu #menu {
-  z-index: 1000;
-  position: absolute;
-  top: 280px;
+  position: relative;
+  top: -60px;
   left: 0;
   border-radius: 30px 30px 0 0;
   background-color: #f7f7f7;
   width: 100%;
   height: auto;
-  padding: 2rem 0;
-  margin-bottom: 2rem;
+  padding: 2rem 0 3rem;
+  margin-bottom: 0;
 }
 #main__menu #menu .menu__title {
   display: flex;
@@ -90,7 +124,7 @@
   letter-spacing: 2px;
 }
 #main__menu #menu .menu__title i {
-  padding-right: 30px;
+  padding-right: 5px;
 }
 #main__menu #menu .menu__wrapper {
   margin: 2rem 0;
@@ -118,17 +152,16 @@
   background-color: #fff;
   margin: 1rem 0;
   border-radius: 20px;
-  padding: 14px;
-  display: grid;
-  grid-template-columns: 95% 5%;
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
   box-shadow: 1px 3px 15px 1px rgba(135, 135, 135, 0.6);
   opacity: 0;
-  position: relative;
+  overflow: hidden;
   animation: move-up 1s ease-in forwards;
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--title {
-  grid-column: 1;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--title h3 {
   font-weight: 700;
@@ -136,44 +169,45 @@
   margin-bottom: 5px;
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--text {
-  grid-row: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--price {
-  grid-row: 2;
   padding-left: 10px;
   font-size: 18px;
   font-weight: 700;
 }
 #main__menu #menu .menu__wrapper .menu__plat .menu__plat--validate {
-  display: none;
-}
-#main__menu #menu .menu__wrapper .menu__plat :hover + .menu__plat--validate {
-  display: block;
+  width: 0px;
+  overflow: hidden;
+  transition: width 500ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
-  padding: 27px 22px;
   background-color: #99e2d0;
   border-radius: 0 20px 15px 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
 }
-#main__menu #menu .menu__wrapper .menu__plat :hover + .menu__plat--validate i {
+#main__menu #menu .menu__wrapper .menu__plat .menu__plat--validate i {
   color: #99e2d0;
-  padding: 6px;
-  border-radius: 15px;
+  padding: 12px;
+  border-radius: 20px;
   background-color: #fff;
   font-size: 14px;
+  transition: transform 500ms ease-in-out;
+}
+#main__menu #menu .menu__wrapper .menu__plat :hover + .menu__plat--validate {
+  width: 20%;
+}
+#main__menu #menu .menu__wrapper .menu__plat :hover + .menu__plat--validate i {
+  transform: rotate(360deg);
 }
 #main__menu #menu .menu__button {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
   #main__menu #menu {
-    top: 370px;
     padding-top: 3rem;
   }
   #main__menu #menu > .container {
@@ -199,12 +233,14 @@
   }
   #main__menu #menu > .container .menu__wrapper .menu__plat {
     margin: 2rem 0;
-    padding: 20px;
+  }
+  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--title {
+    padding: 16px 20px;
   }
   #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--title h3 {
     font-size: 22px;
   }
-  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--text > p {
+  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--title > p {
     font-size: 18px;
   }
   #main__menu #menu .menu__button .btn {
@@ -254,13 +290,15 @@
   }
   #main__menu #menu > .container .menu__wrapper .menu__plat {
     margin: 3rem 0;
-    padding: 24px;
+  }
+  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--title {
+    padding: 18px 26px;
   }
   #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--title h3 {
     font-size: 28px;
   }
-  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--text p {
-    font-size: 20px;
+  #main__menu #menu > .container .menu__wrapper .menu__plat .menu__plat--title .menu__plat--text p {
+    font-size: 23px;
   }
   #main__menu #menu > .container .menu__button .btn {
     font-size: 26px;
@@ -312,7 +350,7 @@ button {
 button .heart-active {
   -webkit-text-stroke: 2px #000;
   color: transparent;
-  font-size: 32px;
+  font-size: 30px;
 }
 button .heart-active :hover {
   cursor: pointer;
@@ -324,17 +362,19 @@ button .heart-active :hover {
   font-size: 30px;
   border: none;
 }
-.heart-active :hover {
-  cursor: pointer;
-}
-
-.heart-active:active {
-  background: -webkit-linear-gradient(1deg, rgb(147, 86, 220) 0%, rgb(150, 86, 220) 41%, rgb(255, 121, 218) 100%);
+.heart-active:hover {
+  background-image: -webkit-linear-gradient(1deg, rgb(147, 86, 220) 0%, rgb(150, 86, 220) 41%, rgb(255, 121, 218) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: initial !important;
-  font-size: 34px;
-  transition: all ease-in 12ms;
+  font-size: 32px;
+  cursor: pointer;
+  transition: background-image ease-in-out 500ms;
+}
+@media screen and (max-width: 768px) {
+  .heart-active:hover {
+    font-size: 30px;
+  }
 }
 
 .btn {
@@ -345,10 +385,23 @@ button .heart-active :hover {
   border-radius: 25px;
   font-size: 19px;
 }
+.btn:hover {
+  box-shadow: 0px 14px 36px 6px rgba(150, 150, 150, 0.45);
+  filter: brightness(1.2);
+  transition: all ease-in-out 5ms;
+}
+
+.elipssis {
+  text-overflow: ellipsis !important;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
 footer {
   background-color: #353535;
-  padding: 1rem 0 2rem;
+  padding: 1rem 0 3rem;
+  min-width: 100%;
+  max-height: 6rem;
 }
 footer .footer__links {
   display: flex;
@@ -371,7 +424,8 @@ footer .footer__links .footer__links--link i {
 }
 @media screen and (min-width: 768px) {
   footer {
-    padding: 2rem 0 2rem;
+    padding: 2rem 0 4rem;
+    max-height: 12rem;
   }
   footer .footer__links {
     align-items: center;
@@ -382,25 +436,6 @@ footer .footer__links .footer__links--link i {
   footer .footer__links .footer__links--link {
     font-size: 20px;
     margin-bottom: 2rem;
-  }
-}
-
-#page-container footer {
-  z-index: 10001;
-  position: absolute;
-  min-width: 100%;
-  top: 262%;
-  max-height: 6rem;
-}
-@media screen and (min-width: 768px) {
-  #page-container footer {
-    max-height: 12rem;
-    top: 362%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  #page-container footer {
-    position: static;
   }
 }
 
@@ -488,10 +523,6 @@ header .header__adress .header__adress--location {
   font-weight: 300;
   margin-bottom: 2rem;
 }
-#reservation .reservation__wrapper .btn:hover {
-  filter: brightness(1.2);
-  transition: all ease-in-out 5ms;
-}
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #reservation {
     padding: 4rem;
@@ -532,7 +563,7 @@ header .header__adress .header__adress--location {
   justify-self: center;
   display: flex;
   justify-content: space-evenly;
-  min-width: 300px;
+  min-width: 250px;
   padding: 20px 15px;
   background: #f7f7f7;
   border-radius: 25px;
@@ -665,6 +696,7 @@ header .header__adress .header__adress--location {
 #restaurants .restaurant__card--text button {
   border: none;
   font-size: 30px;
+  background-color: #f2f2f2;
 }
 @media screen and (min-width: 768px) {
   #restaurants .restaurants__wrapper .restaurant__card {

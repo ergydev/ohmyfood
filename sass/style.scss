@@ -88,10 +88,6 @@ header{
     
   }
 
-  .reservation__wrapper .btn:hover{
-    filter: brightness(1.2);
-    transition: all ease-in-out 5ms;
-  }
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
 
@@ -151,7 +147,7 @@ header{
     
     display: flex;
     justify-content: space-evenly;
-    min-width: 300px;
+    min-width: 250px;
     padding: 20px 15px ;
     background: #f7f7f7;
 
@@ -319,6 +315,7 @@ header{
     button{
       border: none;
       font-size: 30px;
+      background-color: #f2f2f2;
 
     }
   }
